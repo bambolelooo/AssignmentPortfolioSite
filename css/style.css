@@ -11,7 +11,7 @@ body {
 
 header {
     display: flex;
-    background: rgb(54, 54, 54);
+    background: rgba(54, 54, 54, 0.5);
     color: #222222;
     position: sticky;
     top: 5vh;
@@ -25,6 +25,7 @@ header {
     border-width: 0px 0.25vw;
     border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
     justify-content: center;
+    z-index: 10;
 }
 
 /* header a {
@@ -52,79 +53,91 @@ main {
     padding: 15px 20px;
     min-height: 100%;
     border-style: solid;
-    border-color: rgb(54, 54, 54);
+    border-color: rgba(54, 54, 54, 0);
     border-width: 0px 0.25vw;
     font-size: 20px;
 }
 
-/* .button-center {
-    border: solid;
-    border-color: rgb(54, 54, 54);
-    border-width: 0px 0.25vw;
-} */
-
-.button-center:hover {
-    /* border: solid; */
-    border-image-slice: 1;
-    /* border-width: 0px 0.25vw; */
-    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-}
-
-/* .button-left {
-    border: solid;
-    border-color: rgb(54, 54, 54);
-    border-width: 0px 0.25vw;
-} */
-
 .button-left:hover {
-    /* border: solid; */
     border-image-slice: 1;
-    /* border-width: 0px 0.25vw; */
     border-image-source: linear-gradient(to left, #743ad5, rgb(54, 54, 54));
 }
 
-/* .button-right {
-    border: solid;
-    border-color: rgb(54, 54, 54);
-    border-width: 0px 0.25vw;
-} */
-
 .button-right:hover {
-    /* border: solid; */
     border-image-slice: 1;
-    /* border-width: 0px 0.25vw; */
     border-image-source: linear-gradient(to left, rgb(54, 54, 54), #d53a9d);
 }
 
-/* .header:hover .navList {
-    animation: navListAnimation alternate 0.1s both;
+.button-center:hover {
+    animation-name: flash_border_center;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
-@keyframes navListAnimation {
+@keyframes flash_border_center {
+    0% {
+        border-left-color: #743ad5;
+        border-right-color: #d53a9d;
+    }
+    25% {
+        border-color: rgba(54, 54, 54, 0);
+    }
+    50% {
+        border-left-color: #d53a9d;
+        border-right-color: #743ad5;
+    }
+
+    75% {
+        border-color: rgba(54, 54, 54, 0);
+    }
+
     100% {
-        opacity: 0;
-        visibility: hidden;
+        border-left-color: #743ad5;
+        border-right-color: #d53a9d;
     }
 }
 
-.header:hover {
-    animation: headerAnimation alternate 0.5s both;
+.button-center:hover {
+    animation-name: flash_border_center;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
-@keyframes headerAnimation {
-    100% {
-        width: 2vw;
+
+@keyframes flash_border_center {
+    0% {
+        border-left-color: #743ad5;
+        border-right-color: #d53a9d;
     }
-} */
+    25% {
+        border-color: rgba(54, 54, 54, 0);
+    }
+    50% {
+        border-left-color: #d53a9d;
+        border-right-color: #743ad5;
+    }
+
+    75% {
+        border-color: rgba(54, 54, 54, 0);
+    }
+
+    100% {
+        border-left-color: #743ad5;
+        border-right-color: #d53a9d;
+    }
+}
 
 @media screen and (max-width: 950px) {
     header {
         width: 70vw;
         transform: translateX(15vw);
+        border-width: 0px 0.4vw;
     }
 
     .button {
         font-size: 15px;
-        border-width: 0px 0.5vw;
+        border-width: 0px 0.4vw;
     }
 }
 
@@ -132,6 +145,7 @@ main {
     header {
         width: 90vw;
         transform: translateX(5vw);
+        border-width: 0px 0.5vw;
     }
     .button {
         font-size: 10px;
