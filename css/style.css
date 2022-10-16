@@ -22,7 +22,7 @@ header {
     justify-content: center;
     z-index: 10;
     border-width: 0 0.25vw;
-    border-radius: 0.25vw;
+    border-radius: 1vw;
     margin-bottom: 2vh;
 }
 
@@ -54,7 +54,6 @@ main {
     left: 0%;
     width: 100vw;
     min-height: 100%;
-    /* transform: translateX(1vw); */
 }
 
 .content {
@@ -69,7 +68,7 @@ main {
 }
 
 h3 {
-    font-size: 4vh;
+    font-size: 3vh;
 }
 
 .hero {
@@ -77,20 +76,10 @@ h3 {
     flex: auto;
     height: 82vh;
     width: 98vw;
-    /* transform: translateX(10vw); */
-    background: #bbd2c5; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-        to right,
-        #d53a9d,
-        #743ad5
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-        to right,
-        #d53a9d,
-        #743ad5
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #743ad5;
+    background: linear-gradient(to right, #d53a9d, #743ad5);
     margin: 3vh 1vw;
-    border-radius: 20px;
+    border-radius: 2vw;
 
     align-items: center;
     justify-content: center;
@@ -100,10 +89,12 @@ h3 {
 .card {
     display: inline-flex;
     align-items: stretch;
+    margin-bottom: 2vh;
 }
 
 .sidebar {
     margin-left: 1vw;
+    margin-right: 1vw;
     width: 8vw;
     flex-shrink: 0;
     display: flex;
@@ -111,11 +102,19 @@ h3 {
     /* align-items: center; */
     justify-content: center;
     border-style: solid;
-    border-width: 0px 0.25vw;
+    border-width: 0px 1vw;
     border-left-color: #d53a9d;
     border-right-color: #743ad5;
     align-self: stretch;
+    border-radius: 1vw;
+    padding: 1vh 1vw;
 }
+
+#work .sidebar {
+    border-right-color: #d53a9d;
+    border-left-color: #743ad5;
+}
+
 .button {
     display: flex;
     flex: auto;
@@ -156,14 +155,14 @@ h3 {
 }
 
 .button-right {
-    border-top-right-radius: 0.25vw;
-    border-bottom-right-radius: 0.25vw;
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
     border-color: rgba(0, 0, 0, 0);
 }
 
 .button-left {
-    border-top-left-radius: 0.25vw;
-    border-bottom-left-radius: 0.25vw;
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
     border-color: rgba(0, 0, 0, 0);
 }
 
