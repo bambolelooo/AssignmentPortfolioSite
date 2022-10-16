@@ -50,28 +50,33 @@ h1 {
 }
 
 main {
-    display: flex;
     position: relative;
     left: 0%;
-    width: 99vw;
+    width: 100vw;
     min-height: 100%;
-    transform: translateX(1vw);
+    /* transform: translateX(1vw); */
 }
 
-main p {
-    width: 80vw;
+.content {
+    display: flex;
+    margin-bottom: 2vh;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 90vw;
     padding-left: 0.5vw;
+    flex-shrink: 0;
+    max-width: 100%;
 }
 
 h3 {
-    font-size: 2vw;
+    font-size: 4vh;
 }
 
 .hero {
     display: flex;
     flex: auto;
-    height: 84vh;
-    width: 100vw;
+    height: 82vh;
+    width: 98vw;
     /* transform: translateX(10vw); */
     background: #bbd2c5; /* fallback for old browsers */
     background: -webkit-linear-gradient(
@@ -84,13 +89,21 @@ h3 {
         #d53a9d,
         #743ad5
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    margin-bottom: 2vh;
+    margin: 3vh 1vw;
     border-radius: 20px;
+
     align-items: center;
     justify-content: center;
     text-align: center;
 }
+
+.card {
+    display: inline-flex;
+    align-items: stretch;
+}
+
 .sidebar {
+    margin-left: 1vw;
     width: 8vw;
     flex-shrink: 0;
     display: flex;
@@ -101,6 +114,7 @@ h3 {
     border-width: 0px 0.25vw;
     border-left-color: #d53a9d;
     border-right-color: #743ad5;
+    align-self: stretch;
 }
 .button {
     display: flex;
