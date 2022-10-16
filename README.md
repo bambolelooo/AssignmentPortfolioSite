@@ -1,3 +1,3 @@
 # AssignmentPortfolioSite
 
-## this is schoolwork please dont contribute
+## this is schoolwork please dont contribute.
