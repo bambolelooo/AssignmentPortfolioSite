@@ -77,7 +77,7 @@ h3 {
 
 .card {
     display: inline-flex;
-    margin-bottom: 3vh;
+    margin-bottom: 5vh;
 }
 
 .sidebar {
@@ -100,8 +100,8 @@ h3 {
 
 .content {
     flex-wrap: wrap;
-    display: flex;
-    align-items: center;
+    display: inline-flex;
+    align-items: flex-start;
     align-self: center;
     width: 76vw;
     padding-right: 1vw;
@@ -109,37 +109,51 @@ h3 {
     max-width: 100%;
     align-content: center;
     justify-content: space-between;
+    flex-shrink: 0;
+    flex-flow: row wrap;
+    gap: 4vh;
 }
 
-.project {
-    max-width: 45%;
-    min-width: 30%;
-    margin-bottom: 2vh;
-    min-height: 19vh;
+/* .project {
+    flex-basis: 45%;
+    min-width: 500px;
+    max-width: 100%;
+    min-height: 20vh;
     background-color: #743ad5;
     flex-wrap: wrap;
     margin-bottom: 2vh;
-    min-height: 40vh;
     border-radius: 2vw;
     padding: 2vw;
-}
+    flex-grow: 2;
+} */
 
-#about-me p {
-    background: #743ad5;
-    padding: 2vw;
+.pad {
+    flex-basis: 45%;
+    min-width: 320px;
+    max-width: 100%;
+    min-height: 20vh;
+    background-color: #743ad5;
+    flex-wrap: wrap;
     border-radius: 2vw;
+    padding: 2vw;
+    flex-grow: 2;
 }
 
+.my-projects-pad {
+    background: #d53a9d;
+}
+
+/* .contact-me-pad {
+    flex-basis: 100%;
+} */
 #calculator {
     min-width: 100%;
     min-height: 40vh;
-    border-radius: 2vw;
     background: #d53a9d;
     background-image: url(../img/dark-calculator.svg);
     background-size: 7vw 10vh;
     padding: 2vw;
     transition: background-position 10s linear;
-    margin-bottom: 2vh;
 }
 
 #calculator:hover {
@@ -149,19 +163,43 @@ h3 {
 
 #calculator:after {
     float: left;
-    display: flex;
     align-items: center;
     position: relative;
     content: "Calculator";
     font-size: 5vh;
     text-align: center;
     padding: 2vh 2vw;
-    left: 0;
     background-color: #363636;
-    min-height: 40vh;
     min-width: 20vw;
     border-radius: 2vw;
     justify-content: center;
+}
+
+.contact-me-pad {
+    min-height: 20vh;
+    flex-basis: 20%;
+    background-position: center;
+    transition: background-position 5s linear;
+}
+
+.contact-me-pad:hover {
+    background-position: -100% -100%;
+    transition: background-position 10s linear;
+}
+
+.github {
+    background-image: url(../img/github-logo.svg);
+    background-size: 15%;
+}
+
+.telegram {
+    background-image: url(../img/telegram-logo.svg);
+    background-size: 15%;
+}
+
+.twitter {
+    background-image: url(../img/meow-logo.svg); /* rename because adblock blocking "twitter" in name of file xd */
+    background-size: 15%;
 }
 
 #my-projects .sidebar {
