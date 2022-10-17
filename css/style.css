@@ -152,7 +152,7 @@ h3 {
     transition: background-position 10s linear;
 }
 
-.my-projects-pad:after {
+.my-projects-pad::after {
     float: left;
     align-items: center;
     position: relative;
@@ -172,7 +172,7 @@ h3 {
     background-size: 7vw 10vh;
 }
 
-#calculator:after {
+#calculator::after {
     content: "Calculator";
 }
 
@@ -181,20 +181,38 @@ h3 {
     background-size: 4vw 6vh;
 }
 
-#beach:after {
+#beach::after {
     content: "Beach";
+}
+
+#saturn {
+    background-image: url(../img/saturn.svg);
+    background-size: 4vw 6vh;
+}
+
+#saturn::after {
+    content: "Saturn";
+}
+
+#avocado {
+    background-image: url(../img/avocado.svg);
+    background-size: 4vw 6vh;
+}
+
+#avocado:after {
+    content: "Avocado";
 }
 
 .contact-me-pad {
     min-height: 20vh;
     flex-basis: 20%;
     background-position: center;
-    transition: background-position 5s linear;
+    transition: box-shadow 0.2s linear;
 }
 
 .contact-me-pad:hover {
-    background-position: -100% -100%;
-    transition: background-position 10s linear;
+    box-shadow: 0px 0px 1vw #d53a9d;
+    transition: box-shadow 0.2s linear;
 }
 
 .github {
