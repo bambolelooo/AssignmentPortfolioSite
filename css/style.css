@@ -132,7 +132,7 @@ h3 {
     align-items: center;
     justify-content: stretch;
     flex-basis: 45%;
-    min-width: 320px;
+    min-width: 200px;
     max-width: 100%;
     min-height: 20vh;
     background-color: #743ad5;
@@ -217,17 +217,17 @@ h3 {
 
 .github {
     background-image: url(../img/github-logo.svg);
-    background-size: 15%;
+    background-size: fit-contetnt;
 }
 
 .telegram {
     background-image: url(../img/telegram-logo.svg);
-    background-size: 15%;
+    background-size: fit-contetnt;
 }
 
 .twitter {
     background-image: url(../img/meow-logo.svg); /* rename because adblock blocking "twitter" in name of file xd */
-    background-size: 15%;
+    background-size: fit-contetnt;
 }
 
 #my-projects .sidebar {
