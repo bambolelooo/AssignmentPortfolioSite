@@ -13,216 +13,17 @@ header {
     display: flex;
     background: rgba(54, 54, 54, 1);
     color: #222222;
-    top: 5vh;
     width: 50vw;
-    padding: 0;
     float: left;
     transform: translateX(50%);
-    margin-top: 2vh;
-    justify-content: center;
     z-index: 10;
     border-width: 0 0.25vw;
     border-radius: 1vw;
+    margin-top: 2vh;
     margin-bottom: 2vh;
 }
 
-h1 {
-    font-size: 50px;
-}
-
-.logo {
-    display: inline-flex;
-    position: absolute;
-    left: 0;
-    transform: translate(5vh, 2vh);
-}
-.logo img {
-    height: 11vh;
-    transition: transform 1s ease-in-out;
-}
-
-.logo img:hover {
-    transform: rotate(360deg);
-}
-
-.button-right:hover .logo img {
-    transform: rotate(720deg);
-}
-
-main {
-    position: relative;
-    left: 0%;
-    width: 100vw;
-    min-height: 100%;
-}
-
-h3 {
-    font-size: 2vw;
-}
-
-.hero {
-    display: flex;
-    flex: auto;
-    height: 82vh;
-    width: 98vw;
-    background: #743ad5;
-    background: linear-gradient(to right, #d53a9d, #743ad5);
-    margin: 3vh 1vw;
-    border-radius: 2vw;
-
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.card {
-    display: inline-flex;
-    margin-bottom: 5vh;
-}
-
-.sidebar {
-    margin-left: 2.5vw;
-    margin-right: 2vw;
-    width: 18vw;
-    flex-shrink: 0;
-    display: flex;
-    text-align: center;
-    align-self: stretch;
-    justify-content: center;
-    border-style: solid;
-    border-width: 0px 1vw;
-    border-left-color: #d53a9d;
-    border-right-color: #743ad5;
-    align-self: stretch;
-    border-radius: 2vw;
-    padding: 1vh 1vw;
-}
-
-.content {
-    flex-wrap: wrap;
-    display: inline-flex;
-    align-items: flex-start;
-    align-self: center;
-    width: 76vw;
-    padding-right: 1vw;
-    flex-shrink: 0.5;
-    max-width: 100%;
-    align-content: center;
-    justify-content: space-between;
-    flex-shrink: 0;
-    flex-flow: row wrap;
-    gap: 4vh;
-}
-
-.pad {
-    display: flex;
-    align-items: center;
-    justify-content: stretch;
-    flex-basis: 45%;
-    min-width: 200px;
-    max-width: 100%;
-    min-height: 20vh;
-    background-color: #743ad5;
-    flex-wrap: wrap;
-    border-radius: 2vw;
-    padding: 2vw;
-    flex-grow: 2;
-}
-
-.my-projects-pad {
-    background: #d53a9d;
-    transition: background-position 10s linear;
-}
-
-.my-projects-pad:hover {
-    background-position: 100%;
-    transition: background-position 10s linear;
-}
-
-.my-projects-pad::after {
-    float: left;
-    align-items: center;
-    position: relative;
-    font-size: 5vh;
-    text-align: center;
-    padding: 2vh 2vw;
-    background-color: #363636;
-    min-width: 20vw;
-    border-radius: 2vw;
-    justify-content: center;
-}
-
-#calculator {
-    min-width: 100%;
-    min-height: 40vh;
-    background-image: url(../img/dark-calculator.svg);
-    background-size: 7vw 10vh;
-}
-
-#calculator::after {
-    content: "Calculator";
-}
-
-#beach {
-    background-image: url(../img/beach.svg);
-    background-size: 4vw 6vh;
-}
-
-#beach::after {
-    content: "Beach";
-}
-
-#saturn {
-    background-image: url(../img/saturn.svg);
-    background-size: 4vw 6vh;
-}
-
-#saturn::after {
-    content: "Saturn";
-}
-
-#avocado {
-    background-image: url(../img/avocado.svg);
-    background-size: 4vw 6vh;
-}
-
-#avocado:after {
-    content: "Avocado";
-}
-
-.contact-me-pad {
-    min-height: 20vh;
-    flex-basis: 20%;
-    background-position: center;
-    transition: box-shadow 0.2s linear;
-    background-repeat: no-repeat;
-}
-
-.contact-me-pad:hover {
-    box-shadow: 0px 0px 1vw #d53a9d;
-    transition: box-shadow 0.2s linear;
-}
-
-.github {
-    background-image: url(../img/github-logo.svg);
-    background-size: fit-contetnt;
-}
-
-.telegram {
-    background-image: url(../img/telegram-logo.svg);
-    background-size: fit-contetnt;
-}
-
-.twitter {
-    background-image: url(../img/meow-logo.svg); /* rename because adblock blocking "twitter" in name of file xd */
-    background-size: fit-contetnt;
-}
-
-#my-projects .sidebar {
-    border-right-color: #d53a9d;
-    border-left-color: #743ad5;
-}
-
+/* buttons of header */
 .button {
     display: flex;
     flex: auto;
@@ -241,6 +42,7 @@ h3 {
     font-size: 3vh;
 }
 
+/* animating borders of buttons on hover */
 .button-right:hover {
     animation-name: flash_border;
     animation-duration: 4s;
@@ -262,6 +64,7 @@ h3 {
     animation-iteration-count: infinite;
 }
 
+/* different animations for side buttons */
 .button-right {
     border-top-right-radius: 1vw;
     border-bottom-right-radius: 1vw;
@@ -296,6 +99,212 @@ h3 {
     }
 }
 
+/* text in hero */
+h1 {
+    font-size: 50px;
+}
+
+/* logo div (located in top left corner) */
+.logo {
+    display: inline-flex;
+    position: absolute;
+    left: 0;
+    transform: translate(5vh, 2vh);
+}
+
+/* logo svg */
+.logo img {
+    height: 11vh;
+    /* reverse transition */
+    transition: transform 1s ease-in-out;
+}
+
+/* animating logo */
+.logo img:hover {
+    transform: rotate(360deg);
+}
+
+/* hero section quite empty :(  */
+.hero {
+    display: flex;
+    height: 82vh;
+    width: 98vw;
+    background: #743ad5;
+    background: linear-gradient(to right, #d53a9d, #743ad5);
+    margin: 3vh 1vw;
+    border-radius: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+/* side bar text */
+h3 {
+    font-size: 2vw;
+}
+
+/* see layout in readme.md */
+.card {
+    display: inline-flex;
+    margin-bottom: 5vh;
+}
+
+/* see layout in readme.md */
+.sidebar {
+    margin-left: 2.5vw;
+    margin-right: 2vw;
+    width: 18vw;
+    flex-shrink: 0;
+    display: flex;
+    text-align: center;
+    align-self: stretch;
+    justify-content: center;
+    border-style: solid;
+    border-width: 0px 1vw;
+    border-left-color: #d53a9d;
+    border-right-color: #743ad5;
+    align-self: stretch;
+    border-radius: 2vw;
+    padding: 1vh 1vw;
+}
+
+/* see layout in readme.md */
+.content {
+    flex-wrap: wrap;
+    display: inline-flex;
+    align-items: flex-start;
+    align-self: center;
+    width: 76vw;
+    padding-right: 1vw;
+    flex-shrink: 0.5;
+    max-width: 100%;
+    align-content: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    flex-flow: row wrap;
+    gap: 4vh;
+}
+
+/* see layout in readme.md */
+.pad {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-basis: 45%;
+    min-width: 200px;
+    max-width: 100%;
+    min-height: 20vh;
+    background-color: #743ad5;
+    flex-wrap: wrap;
+    border-radius: 2vw;
+    padding: 2vw;
+    flex-grow: 2;
+}
+
+/* projects pads */
+.my-projects-pad {
+    background: #d53a9d;
+    background-size: 4vw 6vh;
+    transition: background-position 10s linear;
+}
+
+/* animating projects bg */
+.my-projects-pad:hover {
+    background-position: 100%;
+    transition: background-position 10s linear;
+}
+
+/* pseudoelement with name of the project */
+.my-projects-pad::after {
+    float: left;
+    align-items: center;
+    position: relative;
+    font-size: 5vh;
+    text-align: center;
+    padding: 2vh 2vw;
+    background-color: #363636;
+    min-width: 20vw;
+    border-radius: 2vw;
+    justify-content: center;
+}
+
+/* calculator project */
+#calculator {
+    min-width: 100%;
+    min-height: 40vh;
+    background-image: url(../img/dark-calculator.svg);
+    background-size: 7vw 10vh;
+}
+
+/* pseudoelement with name of the project */
+#calculator::after {
+    content: "Calculator";
+}
+
+/* beach project */
+#beach {
+    background-image: url(../img/beach.svg);
+}
+
+/* pseudoelement with name of the project */
+#beach::after {
+    content: "Beach";
+}
+
+/* saturn project */
+#saturn {
+    background-image: url(../img/saturn.svg);
+}
+
+/* pseudoelement with name of the project */
+#saturn::after {
+    content: "Saturn";
+}
+
+/* avocado project */
+#avocado {
+    background-image: url(../img/avocado.svg);
+}
+
+/* pseudoelement with name of the project */
+#avocado:after {
+    content: "Avocado";
+}
+
+.contact-me-pad {
+    min-height: 20vh;
+    flex-basis: 31%;
+    background-position: center;
+    transition: box-shadow 0.2s linear;
+    background-repeat: no-repeat;
+    background-size: fit-contetnt;
+}
+
+/* show shadow on contact me pads on hover */
+.contact-me-pad:hover {
+    box-shadow: 0px 0px 1vw #d53a9d;
+    transition: box-shadow 0.2s linear;
+}
+
+/* setting bg images */
+.github {
+    background-image: url(../img/github-logo.svg);
+}
+
+.telegram {
+    background-image: url(../img/telegram-logo.svg);
+}
+
+.twitter {
+    background-image: url(../img/meow-logo.svg); /* rename because adblock blocking "twitter" in name of file xd */
+}
+
+/* reverse colors on my-projects sidebar borders */
+#my-projects .sidebar {
+    border-right-color: #d53a9d;
+    border-left-color: #743ad5;
+}
+
+/* responsive layout */
 @media screen and (max-width: 950px) {
     .logo {
         display: none;
