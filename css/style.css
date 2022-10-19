@@ -337,6 +337,9 @@ h3 {
     .logo {
         display: none;
     }
+    .sidebar {
+        display: none;
+    }
     header {
         width: 90vw;
         transform: translateX(5vw);
