@@ -124,6 +124,11 @@ h1 {
     transform: rotate(360deg);
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 /* hero section quite empty :(  */
 .hero {
     display: flex;
@@ -333,13 +338,21 @@ h3 {
     }
 }
 
+@media screen and (max-width: 650px) {
+    .sidebar {
+        display: none;
+    }
+    .content {
+        width: 98vw;
+        margin: 0;
+    }
+}
+
 @media screen and (max-width: 520px) {
     .logo {
         display: none;
     }
-    .sidebar {
-        display: none;
-    }
+
     header {
         width: 90vw;
         transform: translateX(5vw);
