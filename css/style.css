@@ -107,7 +107,7 @@ header {
 
 /* text in hero */
 h1 {
-    font-size: 50px;
+    font-size: 4vmax;
 }
 
 /* logo div (located in top left corner) */
@@ -146,6 +146,12 @@ main {
     border-radius: 2vmax;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+.hero a img {
+    height: 40vh;
+    border-radius: 2vmax;
 }
 
 /* side bar text */
