@@ -1,3 +1,9 @@
+:root {
+    --purple: #743ad5;
+    --pink: #d53a9d;
+    --dark: rgba(54, 54, 54, 1);
+    --darker: #222222;
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +12,13 @@
 }
 
 body {
-    background: #222222;
+    background: var(--darker);
 }
 
 header {
     display: flex;
-    background: rgba(54, 54, 54, 1);
-    color: #222222;
+    background: var(--dark);
+    color: var(--darker);
     width: 50vw;
     float: left;
     transform: translateX(50%);
@@ -82,16 +88,16 @@ header {
         border-color: rgba(54, 54, 54, 0);
     }
     25% {
-        border-left-color: #d53a9d;
-        border-right-color: #743ad5;
+        border-left-color: var(--pink);
+        border-right-color: var(--purple);
     }
     50% {
         border-color: rgba(54, 54, 54, 0);
     }
 
     75% {
-        border-right-color: #d53a9d;
-        border-left-color: #743ad5;
+        border-right-color: var(--pink);
+        border-left-color: var(--purple);
     }
 
     100% {
@@ -134,8 +140,8 @@ main {
     display: flex;
     height: 82vh;
     width: 98vw;
-    background: #743ad5;
-    background: linear-gradient(to right, #d53a9d, #743ad5);
+    background: var(--purple);
+    background: linear-gradient(to right, var(--pink), var(--purple));
     margin: 3vh 1vw;
     border-radius: 2vw;
     align-items: center;
@@ -165,8 +171,8 @@ h3 {
     justify-content: center;
     border-style: solid;
     border-width: 0px 1vw;
-    border-left-color: #d53a9d;
-    border-right-color: #743ad5;
+    border-left-color: var(--pink);
+    border-right-color: var(--purple);
     align-self: stretch;
     border-radius: 2vw;
     padding: 1vh 1vw;
@@ -198,7 +204,7 @@ h3 {
     min-width: 200px;
     max-width: 100%;
     min-height: 20vh;
-    background-color: #743ad5;
+    background-color: var(--purple);
     flex-wrap: wrap;
     border-radius: 2vw;
     padding: 2vw;
@@ -207,7 +213,7 @@ h3 {
 
 /* projects pads */
 .my-projects-pad {
-    background: #d53a9d;
+    background: var(--pink);
     background-size: 4vw 6vh;
     transition: background-position 10s linear;
 }
@@ -286,7 +292,7 @@ h3 {
 
 /* show shadow on contact me pads on hover */
 .contact-me-pad:hover {
-    box-shadow: 0px 0px 1vw #d53a9d;
+    box-shadow: 0px 0px 1vw var(--pink);
     transition: box-shadow 0.2s linear;
 }
 
@@ -305,8 +311,8 @@ h3 {
 
 /* reverse colors on my-projects sidebar borders */
 #my-projects .sidebar {
-    border-right-color: #d53a9d;
-    border-left-color: #743ad5;
+    border-right-color: var(--pink);
+    border-left-color: var(--purple);
 }
 
 /* responsive layout */
@@ -335,6 +341,10 @@ h3 {
         border-top-left-radius: 0.4vw;
         border-bottom-left-radius: 0.4vw;
         border-color: rgba(0, 0, 0, 0);
+    }
+
+    .contact-me-pad {
+        min-height: 10vh;
     }
 }
 
