@@ -245,16 +245,16 @@ h3 {
 }
 
 /* calculator project */
-#calculator {
+#fitness-lind {
     min-width: 100%;
     min-height: 40vh;
-    background-image: url(../img/dark-calculator.svg);
-    background-size: 7vmax 10vmin;
+    background-image: url(../img/logo-no-background.png);
+    background-size: 7vmax;
 }
 
 /* pseudoelement with name of the project */
-#calculator::after {
-    content: "Calculator";
+#fitness-lind::after {
+    content: "Fitness LIND";
 }
 
 /* beach project */
